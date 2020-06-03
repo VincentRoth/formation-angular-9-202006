@@ -1,4 +1,5 @@
-<span appUppercase>{{ model.name }}</span> - {{ model.species }} -
+<a [routerLink]="['animals', model.id]" appUppercase>{{ model.name }}</a> -
+{{ model.species }} -
 {{ model.comment | truncate: 15 }}
 
 <button type="button" (click)="onDelete()">Supprimer</button>
