@@ -1,0 +1,4 @@
+<span appUppercase>{{ model.name }}</span> - {{ model.species }} -
+{{ model.comment | truncate: 15 }}
+
+<button type="button" (click)="onDelete()">Supprimer</button>
