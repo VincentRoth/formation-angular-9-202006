@@ -1,11 +1,22 @@
-<form *ngIf="vetForm" [formGroup]="vetForm" (ngSubmit)="onSubmit()">
+<form
+  *ngIf="vetForm"
+  #ngForm="ngForm"
+  [formGroup]="vetForm"
+  (ngSubmit)="onSubmit()"
+>
   <label for="firstName">Prénom</label>
   <input id="firstName" formControlName="firstName" />
   <br />
+  <p *ngIf="ngForm.submitted && vetForm.get('firstName').errors?.required">
+    Ce champs est obligatoire.
+  </p>
 
   <label for="lastName">Nom</label>
   <input id="lastName" formControlName="lastName" />
   <br />
+  <p *ngIf="ngForm.submitted && vetForm.get('lastName').errors?.required">
+    Ce champs est obligatoire.
+  </p>
 
   <button>Envoyer</button>
 </form>
