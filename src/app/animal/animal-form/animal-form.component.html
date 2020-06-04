@@ -1,0 +1,16 @@
+<form (ngSubmit)="onSubmit()">
+  <label for="name">Nom</label>
+  <input id="name" [(ngModel)]="model.name" name="name" /><br />
+
+  <label for="species">Espèce</label>
+  <input id="species" [(ngModel)]="model.species" name="species" /><br />
+
+  <label for="vet">Vétérinaire</label>
+  <input id="vet" [(ngModel)]="model.veterinarian" name="vet" /><br />
+
+  <label for="comment">Commentaire</label>
+  <textarea id="comment" [(ngModel)]="model.comment" name="comment"></textarea>
+  <br />
+
+  <button>Envoyer</button>
+</form>

@@ -2,4 +2,5 @@
 {{ model.species }} -
 {{ model.comment | truncate: 15 }}
 
+<a [routerLink]="['edit', model.id]">Modifier</a>
 <button type="button" (click)="onDelete()">Supprimer</button>
