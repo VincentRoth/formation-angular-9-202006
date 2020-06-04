@@ -11,16 +11,11 @@ import { ActivatedRoute } from '@angular/router';
 export class AnimalDetailComponent implements OnInit {
   animal: Animal;
 
-  constructor(
-    private animalService: AnimalService,
-    private activatedRoute: ActivatedRoute
-  ) {}
+  constructor(private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
-    const id = this.activatedRoute.snapshot.paramMap.get('id');
-
-    this.animalService.get(Number(id)).subscribe((animal) => {
-      this.animal = animal;
+    this.activatedRoute.data.subscribe((data: { animal: Animal }) => {
+      this.animal = data.animal;
     });
   }
 }
