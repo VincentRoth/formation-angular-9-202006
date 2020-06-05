@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { VetRootComponent } from './vet-root.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('VetRootComponent', () => {
   let component: VetRootComponent;
@@ -8,9 +9,9 @@ describe('VetRootComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ VetRootComponent ]
-    })
-    .compileComponents();
+      declarations: [VetRootComponent],
+      imports: [RouterTestingModule],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
