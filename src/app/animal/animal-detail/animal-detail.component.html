@@ -1,6 +1,6 @@
 <p>
-  Nom : {{ animal?.name }}<br />
-  Espèce : {{ animal?.species }}<br />
+  {{ "animal.name" | translate: { value: animal?.name } }}<br />
+  {{ "animal.species" | translate: { value: getSpecies() } }}<br />
   Vétérinaire : {{ animal?.veterinarian }}<br />
   Commentaire : {{ animal?.comment }}
 </p>

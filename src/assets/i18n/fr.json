@@ -1,0 +1,13 @@
+{
+  "nav": {
+    "home": "Accueil"
+  },
+  "animal": {
+    "name": "Nom : {{value}}",
+    "species": "Espèce : {{value}}"
+  },
+  "species": {
+    "cat": "Chat",
+    "dog": "Chien"
+  }
+}
