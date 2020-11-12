@@ -5,6 +5,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { ActivatedRoute } from '@angular/router';
 import { of } from 'rxjs';
 import { Animal } from '../../shared/api/animal';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 describe('AnimalDetailComponent', () => {
   let component: AnimalDetailComponent;
@@ -13,7 +14,7 @@ describe('AnimalDetailComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [AnimalDetailComponent],
-      imports: [RouterTestingModule],
+      imports: [RouterTestingModule, SharedModule],
       providers: [
         {
           provide: ActivatedRoute,
